@@ -3,9 +3,9 @@ const rp = require('request-promise');
 
 const chromecast = require('./chromecast');
 
-const SERVER = process.env.SERVER_URL || 'http://localhost:8000/pubsub';
+const SERVER = process.env.SERVER_URL || 'http://localhost:8000';
 
-const client = new faye.Client(SERVER);
+const client = new faye.Client(`${SERVER}/pubsub`);
 
 const createDefaultMessage = ({state, title}) => (
     {

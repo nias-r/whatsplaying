@@ -19,7 +19,6 @@ function connect(chromecastName) {
         }, 10000);
         const browser = mdns.createBrowser(mdns.tcp('googlecast'));
         browser.on('serviceUp', function (service) {
-            console.log(service.txtRecord.fn)
             if (service.txtRecord.fn === chromecastName) {
                 console.log('Found the chromecast');
                 browser.stop();
