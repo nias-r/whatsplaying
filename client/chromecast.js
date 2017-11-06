@@ -3,7 +3,7 @@ const mdns = require('mdns');
 
 const {getRequestId} = require('./requestId');
 
-const CHROMECAST_NAME = process.env.CHROMECAST_NAME || 'Boiler Room Basement';
+const CHROMECAST_NAME = process.env.CHROMECAST_NAME || 'Boiler Room basement';
 
 function getCurrentPlaying() {
     return connect(CHROMECAST_NAME)
