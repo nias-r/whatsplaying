@@ -61,3 +61,4 @@ typings/
 .envrc
 
 .idea
+*.service

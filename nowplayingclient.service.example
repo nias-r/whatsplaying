@@ -1,0 +1,14 @@
+[Unit]
+Description=Whats playing?
+After=network.target
+
+[Service]
+ExecStart=node client/index.js
+WorkingDirectory=/home/pi/whatsplaying
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
